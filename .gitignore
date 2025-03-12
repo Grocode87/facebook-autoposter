@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env
+
+# Generated images
+images/
+
+# Logs
+*.log
+logs/
+facebook_poster.log
+
+# Temporary files
+*.tmp
+.DS_Store
+Thumbs.db
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.pydevproject
+.settings/
+
+# Playwright
+node_modules/
+playwright-report/
+test-results/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Local configuration
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Temporary HTML files that might be created
+temp_*.html 
