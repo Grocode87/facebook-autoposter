@@ -4,12 +4,22 @@ import tempfile
 import json
 import random
 import requests
+import time
 from datetime import datetime
 from facebook import GraphAPI
 from dotenv import load_dotenv
 from playwright.sync_api import sync_playwright
 from PIL import Image
 import anthropic
+
+# Patch for Facebook SDK proxies issue
+import facebook
+original_init = facebook.GraphAPI.__init__
+def patched_init(self, *args, **kwargs):
+    if 'proxies' in kwargs:
+        del kwargs['proxies']
+    return original_init(self, *args, **kwargs)
+facebook.GraphAPI.__init__ = patched_init
 
 # Configure logging
 logging.basicConfig(
